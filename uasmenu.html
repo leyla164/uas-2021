@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><tr>
+    <header style="background: cadetblue; padding: 5px; color: #fff">
+      <h2>Nasi goreng</h2>
+      <p>Nasi goreng enak</p>
+    </header>
+</tr>
+<br> 
+    <div style="border: 2px #04B45F Double; padding: 10px;background-color:#FFFFFF; width: 300px;">  
+        <br> (--**-- MENU --**--)<br>
+        <br>1.Nasi goreng Biasa Rp.15.000<br>
+        <br>2.Nasi goreng Kambing Rp.10.000 <br>
+        <br>3.Nasi goreng Pete Rp.17.000<br>
+        <br>4.Mei Tektek Rp.15.000<br>
+    </div>
+<br>
+<style>
+    .tengah{
+        background-image: url(unggu.png);
+        background-position: center;
+        width: auto;
+        height: auto;
+    }
+    table{
+      background: cadetblue;
+      margin:auto;
+    }
+</style>
+</head>
+<body class="tengah">
+<div>
+
+<table border="1">
+ <center><h2>Kasir</h2></center>
+<tr> 
+<th>Nama</th>
+<th><input type="text"  id="nama" onchange="total()" ></th>
+</tr>
+
+<tr> 
+<th>Harga</th>
+<th><input type="number"  id="harga" onchange="total()"></th>
+</tr>
+
+<tr> 
+<th>Jumlah Beli</th> 
+<th><input type="number" id="jumlah"  value="0" onchange="total()"></th>
+</tr>
+
+<tr> 
+<th>kategori</th>
+<th><select id="status" onchange="total()">
+<option>Nasi goreng biasa</option>
+<option>Nasi goreng Kambing</option>
+<option>Nasi goreng Pete</option>
+<option>Mei Tektek</option>
+           
+</select></th>
+</tr>
+
+<tr> 
+<th>jumlah total</th>
+<th><input type="text" style="background: cadetblue" id="total" disabled></th>
+</tr>
+
+<tr> 
+<th>Pembayaran</th> 
+<th><input type="number" id="bayar" onchange="total()"></th>
+</tr>
+
+<tr> 
+<th>Kembalian</th>
+<th><input type="text" style="background: cadetblue" id="total1" disabled></th>
+</tr>
+         
+            <tr>
+                <th><input type="button" onclick="window.proses()" value="proses"></th>
+                <th><input type="button"  onclick="window.reset()"  value="reset"></th>
+            </tr>
+
+<tr> 
+<table width="300" height="201px" border="8">
+<th><label align="landscape"  id="cetak" ></label></th>
+</table>
+</tr>         
+
+</table>
+<script type="text/javascript">
+
+function total() {
+var nama = document.getElementById('nama').value;
+var harga =  parseInt(document.getElementById('harga').value);
+var jumlah_beli =  parseInt(document.getElementById('jumlah').value);
+var pembayaran =  parseInt(document.getElementById('bayar').value);
+var jenis = document.getElementById("status").value;
+var jumlah_harga = harga * jumlah_beli;
+document.getElementById('total').value = jumlah_harga;
+
+var kembali = pembayaran - jumlah_harga;
+document.getElementById('total1').value = kembali;
+
+var cetak = "Nama   : "+nama+"</br>"+
+                      "Harga  : "+harga+"</br>"+
+                      "Jumlah_beli  : "+jumlah_beli+"</br>"+
+                      "Kategori  : "+jenis+"</br>"+
+                      "Jumlah_total  : "+jumlah_harga+"</br>"+
+                      "pembayaran  : "+pembayaran+"</br>"+
+                      "Kembalian  : "+kembali;
+}
+</script>
+</div>
+</body>
+</html>
+</style>
+   </script>
+   </div>
+  </body>
+</html>

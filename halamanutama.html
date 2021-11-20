@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+      <center>
+        <!--- navigation --->
+        <nav>
+            <!--- logo --->
+            <img src="logo nasi goreng.jpg" width="150" height="100"align="left"/>
+            <a class="logo">Menu Nasi Goreng</a>
+             <style>
+            nav{
+	             display: flex;
+	             justify-content: space-between;
+	             align-items:center;
+	             height: 100px;
+	             background-color:#F0F8FF;
+	             box-shadow:2px 2px 12px rgba(0,0,0,0.2);
+	             padding: 1px 5%;
+              } 
+             </style>
+            <!--- menu --->
+            <ul>
+                <li><a href="#" class="active">Beranda</a></li>
+                <li><a href="uasmenu.html">Transaksi</a></li>
+                <li><a href="uaskontak.html">Kontak</a></li>
+                <li><a href="uasregister.html">Logout</a></li>
+            </ul>
+         <style>
+           ul{
+               list-style:none;
+            }
+           a{
+	          text-decoration:none;
+            }
+           nav ul{
+	          display: flex;
+            }
+ 
+           nav ul li a{
+	            margin:30px;
+	            font-family:myriad pro regular;
+	            color:#505050;
+	            font-size: 15px;
+	            font-weight:700;
+            }
+         </style>
+        </nav>
+      </center>
+      <center>
+    <div class="list-produk">
+        <img src="Nasi goreng biasa.jpg" alt="nasi goreng">
+             <h4>Nasi goreng biasa</h4>
+    </div>
+
+       <div class="list-produk">
+          <img src="Nasi goreng kambing.jpg" alt="nasi goreng">
+             <h4>Nasi goreng kambing</h4>
+       </div>
+
+        <div class="list-produk">
+          <img src="nasi goreng pete.jpg" alt="nasi goreng">
+             <h4>Nasi goreng pete</h4> 
+        </div>
+             
+        <div class="list-produk">
+          <img src="Mie tek tek.jpg" alt="nasi goreng">
+             <h4>Mie Tektet</h4>
+        </div>
+      </center>
+    <style>
+.list-produk{
+    border: 5px solid gainsboro;
+    padding: 30px;
+    float: left;
+    width: 400px;
+    margin: 50px;
+}
+ 
+.list-produk:hover{
+    transition-duration: 700ms;
+    box-shadow: 5px 5px gainsboro;
+}
+ 
+.list-produk img{
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin-bottom: 5px;
+}
+ 
+.list-produk h4, .list-produk h5{
+    color: black;
+    text-align: center;
+    margin-bottom: 5px;
+}
+    </style>
+</body>
+</html>
